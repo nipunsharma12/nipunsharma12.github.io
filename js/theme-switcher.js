@@ -1,4 +1,3 @@
-// Theme Switcher with Configurable Accent Colors
 const themes = {
   teal: { accent: '#4fd1c5', accentSoft: 'rgba(79, 209, 197, 0.15)', accentHover: '#3dbfad' },
   purple: { accent: '#a78bfa', accentSoft: 'rgba(167, 139, 250, 0.15)', accentHover: '#8b5cf6' },
@@ -7,12 +6,10 @@ const themes = {
   amber: { accent: '#fbbf24', accentSoft: 'rgba(251, 191, 36, 0.15)', accentHover: '#f59e0b' }
 };
 
-// Get saved theme or default to teal
 function getSavedTheme() {
   return localStorage.getItem('accentTheme') || 'teal';
 }
 
-// Apply theme
 function applyTheme(themeName) {
   const theme = themes[themeName];
   if (theme) {
@@ -28,7 +25,6 @@ function applyTheme(themeName) {
   }
 }
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = getSavedTheme();
   applyTheme(savedTheme);
@@ -53,7 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
     });
     
-    // Theme selection
     document.querySelectorAll('.color-option').forEach(option => {
       option.addEventListener('click', () => {
         const themeName = option.dataset.theme;

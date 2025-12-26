@@ -19,17 +19,36 @@
 }
 
 .nav-left {
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.nav-left:hover {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: scale(1.02);
 }
 
 .nav-left a {
-  color: var(--text);
+  color: inherit;
   text-decoration: none;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+  background-clip: inherit;
+  font-size: 1.65rem !important;
 }
 
 .nav-left a:hover {
-  color: var(--accent);
+  color: inherit;
 }
 
 .nav-right {
@@ -37,22 +56,22 @@
   gap: 1.5rem;
 }
 
-.nav a {
+.nav-right a {
   color: var(--text-muted);
   font-size: 0.95rem;
   position: relative;
 }
 
-.nav a:hover {
+.nav-right a:hover {
   color: var(--text);
   text-decoration: none;
 }
 
-.nav a.active {
+.nav-right a.active {
   color: var(--accent);
 }
 
-.nav a.active::after {
+.nav-right a.active::after {
   content: '';
   position: absolute;
   bottom: -1.5rem;
@@ -435,6 +454,78 @@
   margin: 0;
 }
 
+/* Achievements Section */
+.achievements {
+  margin-bottom: 4rem;
+}
+
+.achievements h2 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.achievement {
+  padding: 2rem;
+  background: var(--bg-soft);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+}
+
+.achievement:hover {
+  border-color: var(--accent);
+  background: var(--bg-elevated);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: grayscale(0.3);
+  transition: all 0.3s ease;
+}
+
+.achievement:hover .achievement-icon {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.achievement h3 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.achievement p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
 /* Notes Section */
 .notes-list {
   margin-bottom: 4rem;
@@ -636,6 +727,10 @@
   }
   
   .competencies {
+    grid-template-columns: 1fr;
+  }
+  
+  .achievement-grid {
     grid-template-columns: 1fr;
   }
   

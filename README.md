@@ -1,8 +1,7 @@
 # Nipun Sharma — Personal Portfolio
 
-A minimal, fluid, and beautiful personal website showcasing my work as a Software Engineer. Built with pure HTML, CSS, and vanilla JavaScript — no frameworks, no build tools, just clean static pages.
+A minimal, fluid, and beautiful personal website showcasing my work as a Software Engineer. Built with pure HTML, CSS, and vanilla JavaScript — no frameworks, no build tools, just clean static pages with the help of Claude. 
 
-## ✨ Features
 
 - **Minimal & Elegant Design** — Dark theme with smooth animations and transitions
 - **Configurable Accent Colors** — Choose from 5 color themes (Teal, Purple, Blue, Pink, Amber)
@@ -10,31 +9,13 @@ A minimal, fluid, and beautiful personal website showcasing my work as a Softwar
 - **Fast & Lightweight** — No dependencies, no build step, pure static files
 - **Accessible** — Semantic HTML and keyboard navigation support
 
-## 🎨 Sections
+## Sections
 
 - **Home** — Introduction, tech stack, and quick links
 - **Work** — Professional experience, projects, and core competencies
 - **Notes** — Essays and thoughts on software engineering
 - **Travel** — Photography, travel stories, and personal reflections
 
-## 🚀 Quick Start
-
-### Local Development
-
-Simply open `index.html` in your browser, or use a local server:
-
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx serve
-
-# Using PHP
-php -S localhost:8000
-```
-
-Then visit `http://localhost:8000`
 
 ### Deployment
 
@@ -42,7 +23,7 @@ This site is deployed on GitHub Pages. Any push to the `main` branch automatical
 
 **Live Site:** [https://nipunsharma12.github.io/nipunsharma/](https://nipunsharma12.github.io/nipunsharma/)
 
-## 📁 Structure
+## Structure
 
 ```
 nipunsharma/
@@ -61,7 +42,7 @@ nipunsharma/
     └── Nipun_Sharma.pdf    # Resume
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Change Accent Color
 
@@ -95,14 +76,14 @@ const themes = {
 };
 ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - HTML5
 - CSS3 (Grid, Flexbox, Custom Properties)
 - Vanilla JavaScript
 - GitHub Pages
 
-## 📝 License
+## License
 
 © 2025 Nipun Sharma. All rights reserved.
 
