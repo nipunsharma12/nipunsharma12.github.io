@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notes — Nipun Sharma</title>
+
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/theme-switcher.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <div class="nav-left"><a href="index.html">Nipun Sharma</a></div>
+      <div class="nav-right">
+        <a href="work.html">Work</a>
+        <a href="notes.html" class="active">Notes</a>
+        <a href="travel.html">Travel</a>
+        <a href="mailto:nipun.sharma@email.com">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="content">
+    <section class="page-header">
+      <h1>Notes</h1>
+      <p class="subtitle">Thoughts on engineering, systems, and building things that last.</p>
+    </section>
+
+    <section class="notes-list">
+      <article class="note">
+        <div class="note-meta">
+          <time>December 2025</time>
+        </div>
+        <h2><a href="#on-simplicity">On Simplicity in System Design</a></h2>
+        <p>
+          The best systems are the ones you can explain in a few sentences. Complexity is easy — 
+          anyone can add another service, another queue, another layer. Simplicity is hard. 
+          It requires discipline, restraint, and the courage to say no.
+        </p>
+        <p>
+          I've spent years building distributed systems, and the pattern is always the same: 
+          start simple, scale gradually, resist the urge to over-engineer. The systems that 
+          survive are the ones that solve one problem exceptionally well, not ten problems poorly.
+        </p>
+        <a href="#on-simplicity" class="read-more">Read more →</a>
+      </article>
+
+      <article class="note">
+        <div class="note-meta">
+          <time>November 2025</time>
+        </div>
+        <h2><a href="#boring-tech">In Defense of Boring Technology</a></h2>
+        <p>
+          PostgreSQL. Redis. Python. These aren't exciting choices. They're not going to get you 
+          on the front page of Hacker News. But they're reliable, well-documented, and proven at scale.
+        </p>
+        <p>
+          Every new technology comes with a cost: learning curve, debugging time, operational overhead. 
+          Save your innovation tokens for problems that actually matter. Use boring technology for 
+          everything else.
+        </p>
+        <a href="#boring-tech" class="read-more">Read more →</a>
+      </article>
+
+      <article class="note">
+        <div class="note-meta">
+          <time>October 2025</time>
+        </div>
+        <h2><a href="#monitoring">Monitoring Is Not Observability</a></h2>
+        <p>
+          Monitoring tells you that something is wrong. Observability tells you why. 
+          Dashboards full of metrics are useless if you can't answer: "What changed? Where? Why now?"
+        </p>
+        <p>
+          Build systems that explain themselves. Structured logging, distributed tracing, 
+          correlation IDs. When production breaks at 3 AM, you'll thank yourself for the clarity.
+        </p>
+        <a href="#monitoring" class="read-more">Read more →</a>
+      </article>
+
+      <article class="note">
+        <div class="note-meta">
+          <time>September 2025</time>
+        </div>
+        <h2><a href="#tech-interviews">What I Look for in Technical Interviews</a></h2>
+        <p>
+          Not how many algorithms you've memorized. Not whether you can reverse a binary tree on a whiteboard. 
+          I care about how you think, how you communicate, and how you approach problems you haven't seen before.
+        </p>
+        <p>
+          Can you break down a complex system? Do you ask clarifying questions? Do you consider trade-offs? 
+          These are the skills that matter when you're debugging a production outage, not LeetCode scores.
+        </p>
+        <a href="#tech-interviews" class="read-more">Read more →</a>
+      </article>
+
+      <article class="note">
+        <div class="note-meta">
+          <time>August 2025</time>
+        </div>
+        <h2><a href="#databases">Databases Are Not Caches</a></h2>
+        <p>
+          Every few months, someone proposes using Redis as the primary datastore. 
+          Every time, I explain why that's a bad idea. Databases guarantee durability. 
+          Caches optimize for speed. These are fundamentally different problems.
+        </p>
+        <p>
+          Use the right tool for the job. PostgreSQL for your source of truth. 
+          Redis for temporary, high-speed access. Elasticsearch for search. 
+          Don't try to make one tool do everything.
+        </p>
+        <a href="#databases" class="read-more">Read more →</a>
+      </article>
+
+      <article class="note">
+        <div class="note-meta">
+          <time>July 2025</time>
+        </div>
+        <h2><a href="#code-reviews">Code Reviews Are About Communication</a></h2>
+        <p>
+          The goal of code review isn't to catch bugs (though that's nice). 
+          It's to share knowledge, align on patterns, and build better engineers. 
+          A good code review makes the team stronger.
+        </p>
+        <p>
+          Be specific, be kind, and explain the "why" behind your comments. 
+          Point out what's done well, not just what needs fixing. 
+          Code review is where culture gets built, one comment at a time.
+        </p>
+        <a href="#code-reviews" class="read-more">Read more →</a>
+      </article>
+    </section>
+
+    <section class="newsletter-cta">
+      <h2>Want to read more?</h2>
+      <p>I write occasionally about backend engineering, system design, and building reliable software. 
+         No spam, no ads, just thoughtful writing when I have something worth saying.</p>
+      <p><em>Newsletter coming soon.</em></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Nipun Sharma</p>
+  </footer>
+
+  <!-- Theme Switcher -->
+  <div class="theme-switcher">
+    <button class="theme-button" aria-label="Change theme color">
+      🎨
+    </button>
+    <div class="theme-menu">
+      <div class="color-option active" data-theme="teal">
+        <span class="color-dot" style="background: #4fd1c5;"></span>
+        Teal
+      </div>
+      <div class="color-option" data-theme="purple">
+        <span class="color-dot" style="background: #a78bfa;"></span>
+        Purple
+      </div>
+      <div class="color-option" data-theme="blue">
+        <span class="color-dot" style="background: #60a5fa;"></span>
+        Blue
+      </div>
+      <div class="color-option" data-theme="pink">
+        <span class="color-dot" style="background: #f472b6;"></span>
+        Pink
+      </div>
+      <div class="color-option" data-theme="amber">
+        <span class="color-dot" style="background: #fbbf24;"></span>
+        Amber
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/theme-switcher.js"></script>
+</body>
+</html>
