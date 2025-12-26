@@ -1,0 +1,12 @@
+# CODEOWNERS file for nipunsharma portfolio
+# These owners will be the default owners for everything in the repo
+# and will be requested for review when someone opens a pull request.
+
+# Global owners
+* @nipunsharma12 nipun.sharma@email.com
+
+# Specific file ownership
+*.html @nipunsharma12
+*.css @nipunsharma12
+*.js @nipunsharma12
+*.md @nipunsharma12
