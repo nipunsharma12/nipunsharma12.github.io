@@ -1,3 +1,60 @@
+/* Mode Toggle (Light/Dark) */
+.mode-toggle {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  padding: 0.35rem 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-toggle:hover {
+  border-color: var(--accent);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.mode-toggle-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.mode-toggle-icon.active {
+  background: var(--accent);
+}
+
+.mode-toggle-icon.sun {
+  color: #fbbf24;
+}
+
+.mode-toggle-icon.moon {
+  color: #a78bfa;
+}
+
+[data-mode="light"] .mode-toggle-icon.sun.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+[data-mode="dark"] .mode-toggle-icon.moon.active,
+:root:not([data-mode]) .mode-toggle-icon.moon.active {
+  background: var(--accent);
+  color: #fff;
+}
+
 /* Theme Switcher Styles */
 .theme-switcher {
   position: fixed;
@@ -78,6 +135,18 @@
 }
 
 @media (max-width: 768px) {
+  .mode-toggle {
+    bottom: 5rem;
+    right: 1.5rem;
+    padding: 0.3rem 0.4rem;
+  }
+  
+  .mode-toggle-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
+  }
+  
   .theme-switcher {
     bottom: 1.5rem;
     right: 1.5rem;
