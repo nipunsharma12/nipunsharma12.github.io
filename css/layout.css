@@ -1,21 +1,27 @@
 /* Header & Navigation */
 .site-header {
-  border-bottom: 1px solid var(--border);
-  position: sticky;
+  position: fixed;
   top: 0;
-  background: rgba(11, 13, 16, 0.85);
-  backdrop-filter: blur(10px);
+  left: 0;
+  right: 0;
   z-index: 100;
+  padding: 0.5rem 1.5rem;
   transition: all 0.3s ease;
 }
 
 .nav {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 1.5rem 1.5rem;
+  padding: 0.4rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: var(--nav-bg);
+  backdrop-filter: blur(var(--nav-blur, 24px)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--nav-blur, 24px)) saturate(180%);
+  border-radius: 50px;
+  border: 1px solid var(--nav-border);
+  box-shadow: var(--nav-shadow);
 }
 
 .nav-left {
@@ -44,7 +50,7 @@
   -webkit-background-clip: inherit;
   -webkit-text-fill-color: inherit;
   background-clip: inherit;
-  font-size: 1.65rem !important;
+  font-size: 1.4rem !important;
 }
 
 .nav-left a:hover {
@@ -53,39 +59,49 @@
 
 .nav-right {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .nav-right a {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.2s ease;
 }
 
 .nav-right a:hover {
   color: var(--text);
   text-decoration: none;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .nav-right a.active {
   color: var(--accent);
 }
 
-.nav-right a.active::after {
-  content: '';
-  position: absolute;
-  bottom: -1.5rem;
-  left: 0;
-  right: 0;
-  height: 1px;
+.nav-right a:last-child {
   background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.nav-right a:last-child:hover {
+  background: var(--accent-hover);
+  color: var(--bg);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 209, 197, 0.3);
 }
 
 /* Main Content */
 .content {
   max-width: 720px;
   margin: 0 auto;
-  padding: 4rem 1.5rem;
+  padding: 6rem 1.5rem 4rem;
   min-height: calc(100vh - 200px);
 }
 
@@ -688,20 +704,35 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .site-header {
+    padding: 0.75rem 1rem;
+  }
+  
   .nav {
-    padding: 1rem 1.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 40px;
   }
   
   .nav-right {
-    gap: 1rem;
+    gap: 0.25rem;
   }
   
-  .nav a {
-    font-size: 0.9rem;
+  .nav-right a {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .nav-right a:last-child {
+    padding: 0.4rem 1rem;
+    margin-left: 0.25rem;
+  }
+  
+  .nav-left a {
+    font-size: 1.2rem !important;
   }
   
   .content {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem 3rem;
   }
   
   .intro h1,
@@ -759,17 +790,36 @@
 }
 
 @media (max-width: 480px) {
+  .site-header {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .nav {
+    padding: 0.6rem 0.875rem;
+    border-radius: 35px;
+  }
+  
   .intro h1,
   .page-header h1 {
     font-size: 1.75rem;
   }
   
   .nav-right {
-    gap: 0.75rem;
+    gap: 0.125rem;
   }
   
-  .nav a {
-    font-size: 0.85rem;
+  .nav-right a {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.5rem;
+  }
+  
+  .nav-right a:last-child {
+    padding: 0.35rem 0.75rem;
+    margin-left: 0.125rem;
+  }
+  
+  .nav-left a {
+    font-size: 1rem !important;
   }
   
   .job,

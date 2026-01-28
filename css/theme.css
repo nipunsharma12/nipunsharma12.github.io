@@ -1,4 +1,5 @@
 :root {
+  /* Dark mode (default) */
   --bg: #0b0d10;
   --bg-soft: #11141a;
   --bg-elevated: #1a1d24;
@@ -10,6 +11,33 @@
   --accent: #4fd1c5;
   --accent-soft: rgba(79, 209, 197, 0.15);
   --accent-hover: #3dbfad;
+  
+  /* Nav specific */
+  --nav-bg: rgba(15, 17, 22, 0.6);
+  --nav-border: rgba(255, 255, 255, 0.1);
+  --nav-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  --nav-blur: 24px;
+}
+
+/* Light mode - Oaty */
+[data-mode="light"] {
+  --bg: #f5f0e8;
+  --bg-soft: #ebe5db;
+  --bg-elevated: #fff9f0;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+  --text: #2d2a26;
+  --text-muted: #5c5752;
+  --text-subtle: #8a847a;
+  --accent: #2a9d8f;
+  --accent-soft: rgba(42, 157, 143, 0.12);
+  --accent-hover: #21867a;
+  
+  /* Nav specific for light */
+  --nav-bg: rgba(255, 252, 245, 0.65);
+  --nav-border: rgba(0, 0, 0, 0.1);
+  --nav-shadow: 0 4px 24px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --nav-blur: 24px;
 }
 
 /* Alternative accent colors - change the accent variable above to switch */
