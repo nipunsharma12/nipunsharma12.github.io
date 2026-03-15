@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nipun Sharma — Software Engineer</title>
+  <meta name="description" content="Software Engineer specialising in backend systems, cloud infrastructure, and distributed architectures." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💾</text></svg>">
 
   <link rel="stylesheet" href="css/base.css" />
@@ -12,77 +13,349 @@
   <link rel="stylesheet" href="css/theme-switcher.css" />
 </head>
 <body>
-  <header class="site-header">
+
+  <!-- Scroll progress indicator -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Ambient background orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="site-header" id="siteHeader">
     <nav class="nav">
-      <div class="nav-left"><a href="index.html">Nipun Sharma</a></div>
+      <div class="nav-left"><a href="#home">Nipun Sharma</a></div>
       <div class="nav-right">
-        <a href="work.html">Work</a>
-        <a href="notes.html">Notes</a>
-        <a href="travel.html">Travel</a>
-        <a href="mailto:nipunsharma12@outlook.com">Email Me!</a>
+        <a href="#work" class="nav-link" data-section="work">Work</a>
+        <a href="#notes" class="nav-link" data-section="notes">Notes</a>
+        <a href="#travel" class="nav-link" data-section="travel">Travel</a>
+        <a href="mailto:nipunsharma12@outlook.com">Email Me</a>
       </div>
     </nav>
   </header>
 
-  <main class="content">
-    <section class="intro">
-      <h1>Software Engineer</h1>
-      <p class="subtitle">Backend systems • Cloud infrastructure • Tech enthusiast</p>
-
-      <p class="lead">
-        I build backend systems that are boring in the best way — observable, predictable, and designed to age well. 
+  <!-- ======================================================
+       HERO
+  ====================================================== -->
+  <section id="home" class="hero-section">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Software Engineer</p>
+      <h1 class="hero-name">
+        <span class="hero-first">Nipun</span>
+        <span class="hero-last">Sharma</span>
+      </h1>
+      <p class="hero-sub">Backend systems &nbsp;·&nbsp; Cloud infrastructure &nbsp;·&nbsp; Tech enthusiast</p>
+      <p class="hero-bio">
+        I build backend systems that are boring in the best way — observable, predictable, and designed to age well.
         Currently focused on scalable architectures, distributed systems, and making complex things simple.
       </p>
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View Work</a>
+        <a href="https://github.com/nipunsharma12" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+        <a href="https://linkedin.com/in/nipunsharma12" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        <a href="mailto:nipunsharma12@outlook.com" class="btn btn-ghost">Email</a>
+      </div>
+    </div>
+    <a href="#work" class="hero-scroll" aria-label="Scroll to work section">
+      <div class="hero-scroll-line"></div>
+    </a>
+  </section>
 
-      <p class="bio">
-        When I'm not debugging production issues or optimizing database queries, you'll find me capturing 
-        moments through my camera lens or exploring new places. I believe good engineering is about clarity, 
-        restraint, and systems that just work.
+  <!-- ======================================================
+       WORK
+  ====================================================== -->
+  <section id="work" class="section">
+    <div class="section-inner">
+
+      <div class="section-header reveal">
+        <div>
+          <h2 class="section-title">Work</h2>
+          <p class="section-sub">Building systems that scale, solving problems that matter.</p>
+        </div>
+        <a href="assets/Nipun_Sharma.pdf" target="_blank" rel="noopener" class="btn btn-accent">Resume</a>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline" id="timeline">
+        <div class="timeline-line" id="timelineLine" aria-hidden="true"></div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="job-company">Maersk — Copenhagen, Denmark</p>
+              </div>
+              <span class="job-duration">Feb 2023 — Present</span>
+            </div>
+            <p class="job-desc">Leading platform modernisation initiatives and backend service optimisation for global shipping operations. Driving cloud migration, event-driven architectures, and quality engineering practices across a microservices ecosystem.</p>
+            <ul class="highlights">
+              <li>Modernised legacy Java 8 services to Spring Boot 21, cutting startup times by 90% (60s → 6s)</li>
+              <li>Upgraded microservices to 12-factor-app guidelines, enabling seamless Azure cloud migration</li>
+              <li>Integrated GitHub CI pipelines with automated tests — build integrity under 10 minutes</li>
+              <li>Implemented Kafka-based PTL System integrations with sub-100ms event-driven latency</li>
+              <li>Reduced customer data processing times by 50%, driving operational efficiency</li>
+              <li>Increased automated integration test coverage to 50%, enforcing CI quality gates</li>
+              <li>Reduced SonarQube-reported issues by 85%, improving maintainability across services</li>
+              <li>Built Spring AOP file scanning for endpoints — manual effort near-zero per service</li>
+              <li>Applied agentic AI &amp; MCP servers to accelerate backend workflows and system intelligence</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Java</span><span>Spring Boot</span><span>Azure</span><span>Kafka</span>
+              <span>JUnit</span><span>Mockito</span><span>SonarQube</span><span>GitHub CI/CD</span><span>Spring AOP</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" style="--delay: 0.1s">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="job-company">TDC · Tata Consultancy Services — Copenhagen, Denmark</p>
+              </div>
+              <span class="job-duration">Dec 2018 — Feb 2023</span>
+            </div>
+            <p class="job-desc">Built and modernised backend systems for telecom infrastructure, ensuring high availability for mission-critical services. Specialised in event-driven architectures, automation, and cloud readiness.</p>
+            <ul class="highlights">
+              <li>Migrated Java 1.8 to 17 and MySQL 5.1.x to 8.0 — reduced time-to-market by 90%</li>
+              <li>Designed highly redundant microservices ensuring 99.99% service availability for telecom users</li>
+              <li>Established Kafka infrastructure handling multiple data sources with &lt;10ms latency</li>
+              <li>Built SOAP library for Cisco Broadworks, reliably handling 7,500+ requests</li>
+              <li>Optimised heap memory usage under high load by 50%, improving system stability</li>
+              <li>Developed Python frameworks to automate modular scripts in under 10 minutes</li>
+              <li>Redesigned monitoring scripts enabling automated web scraping every 2 minutes</li>
+              <li>Reduced technical debt by 80% using Lombok and SonarLint</li>
+              <li>Adapted for 12-factor cloud readiness with Spring Cloud, actuators, and Spring Admin</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Java</span><span>MySQL</span><span>Kafka</span><span>Python</span>
+              <span>SOAP</span><span>Spring Cloud</span><span>Lombok</span><span>SonarLint</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+
+      <!-- Achievements bento grid -->
+      <div class="achievements reveal">
+        <h3 class="subsection-title">Notable Achievements</h3>
+        <div class="bento-grid">
+          <div class="bento-card bento-accent">
+            <span class="bento-stat">50%</span>
+            <h4>Performance Improvement</h4>
+            <p>Reduced backend processing times through architectural modernisation across global shipping operations.</p>
+          </div>
+          <div class="bento-card">
+            <span class="bento-stat">&lt;100ms</span>
+            <h4>Event-Driven Latency</h4>
+            <p>Kafka-based architecture with sub-100ms latency and 50% faster deployments via optimised CI/CD.</p>
+          </div>
+          <div class="bento-card">
+            <span class="bento-stat">85%</span>
+            <h4>Code Quality Uplift</h4>
+            <p>Cut SonarQube issues by 85%, enforced quality gates, and increased test coverage across microservices.</p>
+          </div>
+          <div class="bento-card bento-wide">
+            <span class="bento-label">AI-Powered</span>
+            <h4>MCP Workflow Automation</h4>
+            <p>Pioneered MCP server integration and agentic AI to simplify complex backend–database workflows, accelerating developer productivity across 7,000+ stored procedures — using Claude Sonnet 4.5 and GPT-5 for intelligent code generation, testing, and documentation.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills grid -->
+      <div class="skills-section reveal">
+        <h3 class="subsection-title">Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <h4>Backend &amp; Platforms</h4>
+            <p>Java (8–21), Spring Boot, REST, SOAP, Microservices, Event-driven architecture, Kafka, Integration &amp; Component Testing</p>
+          </div>
+          <div class="skill-card">
+            <h4>Databases &amp; Data</h4>
+            <p>MS SQL, MySQL, PostgreSQL, MongoDB, Flyway, schema migrations, API-to-database abstraction (7,000+ stored procedures)</p>
+          </div>
+          <div class="skill-card">
+            <h4>Cloud &amp; DevOps</h4>
+            <p>Docker, Docker Compose, Azure, Git, GitHub Actions (CI/CD), Kubernetes, Terraform, SVN</p>
+          </div>
+          <div class="skill-card">
+            <h4>Observability &amp; Quality</h4>
+            <p>OpenTelemetry, Prometheus, Grafana, Loki, SonarQube, JUnit, Mockito, TDD</p>
+          </div>
+          <div class="skill-card">
+            <h4>Languages</h4>
+            <p>Java &nbsp;·&nbsp; Python &nbsp;·&nbsp; JavaScript &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Go</p>
+          </div>
+          <div class="skill-card">
+            <h4>Agentic AI</h4>
+            <p>MCP servers (MSSQL, Atlassian), Claude Sonnet 4.5, GPT-5 — workflow automation and LLM-assisted engineering</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       NOTES
+  ====================================================== -->
+  <section id="notes" class="section section-alt">
+    <div class="section-inner">
+
+      <div class="section-header reveal">
+        <div>
+          <h2 class="section-title">Notes</h2>
+          <p class="section-sub">Thoughts on engineering, systems, and building things that last.</p>
+        </div>
+      </div>
+
+      <div class="notes-grid">
+        <article class="note-card reveal" style="--delay: 0.0s">
+          <time class="note-date">December 2025</time>
+          <h3 class="note-title">On Simplicity in System Design</h3>
+          <p class="note-excerpt">The best systems are the ones you can explain in a few sentences. Complexity is easy — anyone can add another service, another queue, another layer. Simplicity requires discipline, restraint, and the courage to say no.</p>
+        </article>
+        <article class="note-card reveal" style="--delay: 0.08s">
+          <time class="note-date">November 2025</time>
+          <h3 class="note-title">In Defense of Boring Technology</h3>
+          <p class="note-excerpt">PostgreSQL. Redis. Python. These aren't exciting choices. But they're reliable, well-documented, and proven at scale. Save your innovation tokens for problems that actually matter.</p>
+        </article>
+        <article class="note-card reveal" style="--delay: 0.16s">
+          <time class="note-date">October 2025</time>
+          <h3 class="note-title">Monitoring Is Not Observability</h3>
+          <p class="note-excerpt">Monitoring tells you that something is wrong. Observability tells you why. Build systems that explain themselves: structured logging, distributed tracing, correlation IDs.</p>
+        </article>
+        <article class="note-card reveal" style="--delay: 0.04s">
+          <time class="note-date">September 2025</time>
+          <h3 class="note-title">What I Look for in Technical Interviews</h3>
+          <p class="note-excerpt">Not how many algorithms you've memorised. I care about how you think, how you communicate, and how you approach problems you haven't seen before. Can you break down a complex system? Do you consider trade-offs?</p>
+        </article>
+        <article class="note-card reveal" style="--delay: 0.12s">
+          <time class="note-date">August 2025</time>
+          <h3 class="note-title">Databases Are Not Caches</h3>
+          <p class="note-excerpt">Every few months, someone proposes using Redis as the primary datastore. Databases guarantee durability. Caches optimise for speed. These are fundamentally different problems — use the right tool for each.</p>
+        </article>
+        <article class="note-card reveal" style="--delay: 0.2s">
+          <time class="note-date">July 2025</time>
+          <h3 class="note-title">Code Reviews Are About Communication</h3>
+          <p class="note-excerpt">The goal of a code review isn't to catch bugs (though that's nice). It's to share knowledge, align on patterns, and build better engineers. A good review makes the whole team stronger.</p>
+        </article>
+      </div>
+
+      <div class="notes-footer reveal">
+        <p>Newsletter coming soon — thoughts on backend engineering when I have something worth saying.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================
+       TRAVEL
+  ====================================================== -->
+  <section id="travel" class="section">
+    <div class="section-inner">
+
+      <div class="section-header reveal">
+        <div>
+          <h2 class="section-title">Travel</h2>
+          <p class="section-sub">Moments captured, places remembered.</p>
+        </div>
+      </div>
+
+      <p class="travel-intro reveal">
+        When I'm not writing code, I'm usually behind a camera or planning the next trip.
+        Photography taught me patience and perspective — two things that make me a better engineer.
+        These are some places I've been, stories I want to remember.
       </p>
 
-      <div class="links">
-        <a href="work.html">Work</a>
-        <a href="notes.html">Notes</a>
-        <a href="travel.html">Travel</a>
-        <a href="https://github.com/nipunsharma12" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/nipunsharma12" target="_blank">LinkedIn</a>
+      <div class="travel-grid">
+        <article class="travel-card reveal" style="--delay: 0.0s">
+          <div class="travel-img-wrap">
+            <div class="travel-img-placeholder"></div>
+          </div>
+          <div class="travel-info">
+            <time>Summer 2024</time>
+            <h3>Himalayas, India</h3>
+            <p>Three weeks in the mountains. No cell service, no email — just trails and clouds. Captured sunrise at 14,000 feet. The air was thin, the light was perfect.</p>
+          </div>
+        </article>
+        <article class="travel-card reveal" style="--delay: 0.08s">
+          <div class="travel-img-wrap">
+            <div class="travel-img-placeholder"></div>
+          </div>
+          <div class="travel-info">
+            <time>Spring 2024</time>
+            <h3>Kyoto, Japan</h3>
+            <p>Cherry blossoms, temples, and quiet streets at dawn. Kyoto reminded me that beauty doesn't have to be loud — a lesson I try to apply to code too.</p>
+          </div>
+        </article>
+        <article class="travel-card reveal" style="--delay: 0.16s">
+          <div class="travel-img-wrap">
+            <div class="travel-img-placeholder"></div>
+          </div>
+          <div class="travel-info">
+            <time>Winter 2023</time>
+            <h3>Iceland</h3>
+            <p>Midnight sun, northern lights, waterfalls. Iceland is a photographer's dream — and a reminder that nature operates on a completely different scale than we do.</p>
+          </div>
+        </article>
+        <article class="travel-card reveal" style="--delay: 0.04s">
+          <div class="travel-img-wrap">
+            <div class="travel-img-placeholder"></div>
+          </div>
+          <div class="travel-info">
+            <time>Autumn 2023</time>
+            <h3>Scottish Highlands</h3>
+            <p>Moody skies, ancient castles, and landscapes that felt pulled from another era. Waiting hours for the right light is meditative — you can't rush it, you can't force it.</p>
+          </div>
+        </article>
+        <article class="travel-card reveal" style="--delay: 0.12s">
+          <div class="travel-img-wrap">
+            <div class="travel-img-placeholder"></div>
+          </div>
+          <div class="travel-info">
+            <time>Winter 2022</time>
+            <h3>Kerala Backwaters, India</h3>
+            <p>Slow boats, palm trees, sunsets that looked unreal. Kerala is where I learned to slow down. Not everything needs to be optimised for efficiency.</p>
+          </div>
+        </article>
+        <article class="travel-card reveal" style="--delay: 0.2s">
+          <div class="travel-img-wrap">
+            <div class="travel-img-placeholder"></div>
+          </div>
+          <div class="travel-info">
+            <time>Summer 2022</time>
+            <h3>New Zealand</h3>
+            <p>Mountains, lakes, endless hiking trails. Photographed the Milky Way for the first time here — clear skies, minimal light pollution, and a reminder of how small we are.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="photography-note reveal">
+        <h3>On Photography</h3>
+        <p>I shoot mostly with natural light, minimal editing. Sony α7 III, 24-70mm for versatility, 85mm for portraits. Less gear means more focus on the shot. The same principles I apply to code: clarity, restraint, and intention.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="https://github.com/nipunsharma12" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/nipunsharma12" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:nipunsharma12@outlook.com">Email</a>
       </div>
-    </section>
-
-    <section class="tech-stack">
-      <h2>Tech Stack</h2>
-      <div class="stack-grid">
-        <div class="stack-category">
-          <h3>Languages</h3>
-          <p>Java • Python • JavaScript • SQL • Go</p>
-        </div>
-        <div class="stack-category">
-          <h3>Backend & APIs</h3>
-          <p>Flask • Django • Spring Boot • FastAPI • REST • GraphQL</p>
-        </div>
-        <div class="stack-category">
-          <h3>Cloud & Infrastructure</h3>
-          <p>AWS • Azure • Docker • Kubernetes • Terraform</p>
-        </div>
-        <div class="stack-category">
-          <h3>Databases</h3>
-          <p>PostgreSQL • MongoDB • Redis • MySQL • Elasticsearch</p>
-        </div>
-        <div class="stack-category">
-          <h3>Tools & Practices</h3>
-          <p>Git • CI/CD • Microservices • System Design • Performance Optimization</p>
-        </div>
-        <div class="stack-category">
-          <h3>Interests</h3>
-          <p>Photography • Travel • Technology • Minimalism</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>© 2025 Nipun Sharma</p>
+      <p class="footer-copy">&copy; 2025 Nipun Sharma</p>
+    </div>
   </footer>
 
   <!-- Mode Toggle (Light/Dark) -->
@@ -121,5 +394,6 @@
   </div>
   
   <script src="js/theme-switcher.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>
